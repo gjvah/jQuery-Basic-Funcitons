@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Functions</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src="app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="main">
+            <h2>jQuery Basic Functions Cheat Sheet</h2>
+            <div id="click" class="main_divs">
+                <h1>.click</h1>
+                <button class="click">.click</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"> <p>
+                    $('button.click').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;alert('You have clicked a button!');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="hide" class="main_divs">
+                <h1>.hide</h1>
+                <button class="hide">.hide</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.hide').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#hide p').hide('slow');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="show" class="main_divs">
+                <h1>.show</h1>
+                <div class="hiddenShow">
+                    Hidden Div
+                </div>
+                <button class="show">.show</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"> <p>
+                    $('button.show').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#show p').show('slow');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="toggle" class="main_divs">
+                <h1>.toggle</h1>
+                <button class="toggle">.toggle</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.toggle').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#toggle p').toggle('slow');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="slideDown" class="main_divs">
+                <h1>.slideDown</h1>
+                <div class="slideDownHidden">
+                    Hidden Div
+                </div>
+                <button class="slideDown">.slideDown</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.slideDown').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;if ($('.slideDownHidden').first().is(':hidden')) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.slideDownHidden').slideDown('slow');<br>
+                    &nbsp;&nbsp;&nbsp;} else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('.slideDownHidden').hide();<br>
+                    &nbsp;&nbsp;&nbsp;}<br>
+                    });
+                </p></code>
+            </div>
+            <div id="slideUp" class="main_divs">
+                <h1>.slideUp</h1>
+                <button class="slideUp">.slideUp</button>
+
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.slideUp').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;if ($('#slideUp p').first().is(':hidden')) {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#slideUp p').show('slow');<br>
+                    &nbsp;&nbsp;&nbsp;} else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$('#slideUp p').slideUp();<br>
+                    }
+                    });
+                </p></code>
+            </div>
+            <div id="slideToggle" class="main_divs">
+                <h1>.slideToggle</h1>
+                <button class="slideToggle">.slideToggle</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.slideToggle').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#slideToggle p').slideToggle('slow');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="fadeIn" class="main_divs">
+                <h1>.fadeIn</h1>
+                <div class="hiddenFadeIn">
+                    Hidden Div
+                </div>
+                <button class="fadeIn">.fadeIn</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.fadeIn').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#fadeIn .hiddenFadeIn').fadeIn(1000);<br>
+                    return false;
+                    });
+                </p></code>
+            </div>
+            <div id="fadeOut" class="main_divs">
+                <h1>.fadeOut</h1>
+                <button class="fadeOut">.fadeOut</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.fadeOut').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#fadeOut p').fadeOut('slow');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="addClass" class="main_divs">
+                <h1>.addClass</h1>
+                <button class="addClass">.addClass</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.addClass').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#addClass p').addClass('bg-new-color');<br>
+                    });
+                </p></code>
+            </div>
+            <div id="before" class="main_divs">
+                <h1>.before</h1>
+                <button class="before">.before</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.before').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#before p').before(document.createTextNode('Hello'));<br>
+                    });
+                </p></code>
+            </div>
+            <div id="after" class="main_divs">
+                <h1>.after</h1>
+                <button class="after">.after</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.after').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#after p').after(document.createTextNode('Hello'));<br>
+                    });
+                </p></code>
+            </div>
+            <div id="append" class="main_divs">
+                <h1>.append</h1>
+                <button class="append">.append</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.append').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#append p').append(document.createTextNode('Hello'));<br>
+                    });
+                </p></code>
+            </div>
+            <div id="html" class="main_divs">
+                <h1>.html</h1>
+                <button class="html">.html</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.html').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;('#html p').html("<span class='red'>Hello <b>Again</b></span>");<br>
+                    });
+                </p></code>
+            </div>
+            <div id="val" class="main_divs">
+                <h1>.val</h1>
+                <button class="val">.val</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    <input type="text" value="<- Click the button to see this text change to button value text(.val)" class="inp"><br>
+                    $('button.val').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;var text = $(this).text();<br>
+                    &nbsp;&nbsp;&nbsp;$('input').val(text);<br>
+                    });
+                </p></code>
+            </div>
+            <div id="text" class="main_divs">
+                <h1>.text</h1>
+                <button class="text">.text</button>
+                <h3>Code:</h3>
+                <code class="prettyprint"><p>
+                    $('button.text').click(function() {<br>
+                    &nbsp;&nbsp;&nbsp;$('#text p').text('Changed Text');<br>
+                    });
+                </p></code>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+</body>
+
+</html>
