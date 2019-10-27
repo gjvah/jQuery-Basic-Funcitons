@@ -1,7 +1,7 @@
 # jQuery-Basic-Funcitons
 jQuery Basic functions cheat sheet
 
-Simple jQuery training project - Clicking on the button calls the funciton on the paragraph, whihc in turn contains the sample code for the function. 
+Simple jQuery training project - Clicking on the button calls the function on the paragraph (where possible), which in turn contains the sample code for the function. 
 
 <a href="http://convent.us/CodingDojo/jqbasics/" target="_blank">Live Demo</a>
 
